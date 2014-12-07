@@ -1,0 +1,9 @@
+<h1>Editing reservation</h1>
+
+<%= render 'form' %>
+
+<strong>Actions:</strong>
+<%= link_to 'Confirm', confirm_url(@reservation) %>
+<%= link_to 'Cancel', cancel_url(@reservation) %>
+<br />
+<%= link_to 'Back', reservations_path %>

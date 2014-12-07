@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Checkin Date:</strong>
+  <%= @reservation.checkin %>
+</p>
+
+<p>
+  <strong>Checkout Date:</strong>
+  <%= @reservation.checkout %>
+</p>
+
+<p>
+  <strong>Client names:</strong>
+  <%= @reservation.client_names %>
+</p>
+
+<p>
+  <strong>Client email:</strong>
+  <%= @reservation.client_email %>
+</p>
+
+<p>
+  <strong>Client phone:</strong>
+  <%= @reservation.client_phone %>
+</p>
+
+<p>
+  <strong>Details:</strong>
+  <%= @reservation.details %>
+</p>
+
+<p>
+  <strong>Clients count:</strong>
+  <%= @reservation.clients_count %>
+</p>
+
+<p>
+  <strong>Breakfast:</strong>
+  <%= @reservation.breakfast %>
+</p>
+
+<%= if @reservation.status == 'new' then link_to 'Edit', edit_reservation_path(@reservation) end %>
+<%= @reservation.status == 'new' ? link_to('Back', reservations_path) : link_to('Back', history_url) %>
