@@ -7,7 +7,7 @@ class ReservationsController < ApplicationController
     @reservations = Reservation.where(status: 'new').order(:create_date)
   end
 
-  # GET /reservations/history
+  # GET /reservationshistory
   def history
     @reservations = Reservation.where.not(status: 'new').order(:create_date)
     @history = true

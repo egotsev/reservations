@@ -45,7 +45,7 @@
   </div>
   <div class="field">
     <%= f.label :payment_type %><br>
-    <%= f.input :payment_type, :as => :select, :collection => Reservation::PAYMENT_METHODS %>
+    <%= f.select :payment_type, Reservation::PAYMENT_METHODS %>
   </div>
   <div class="actions">
     <%= f.submit %>
