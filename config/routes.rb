@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   get 'reservations/:id/confirm' => 'reservations#confirm', as: :confirm
   get 'reservations/:id/cancel' => 'reservations#cancel', as: :cancel
   get 'reservationshistory' => 'reservations#history', as: :history
+  get 'rooms/update' => 'rooms#update'
+  get 'rooms' => 'rooms#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
