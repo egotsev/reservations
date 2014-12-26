@@ -1,9 +1,9 @@
-<h1>Editing reservation</h1>
+<h1><%= t 'reservation.actions.edit' %></h1>
 
 <%= render 'form' %>
 
-<strong>Actions:</strong>
-<%= link_to 'Confirm', confirm_url(@reservation) %>
-<%= link_to 'Cancel', cancel_url(@reservation) %>
+<strong><%= t 'reservation.actions.actions' %>:</strong>
+<%= link_to t('reservation.actions.confirm'), confirm_url(@reservation) %>
+<%= link_to t('reservation.actions.cancel'), cancel_url(@reservation) %>
 <br />
-<%= link_to 'Back', reservations_path %>
+<%= link_to t('reservation.actions.back'), reservations_path %>

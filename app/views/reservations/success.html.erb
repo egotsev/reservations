@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+<p id="notice"><%= @notice %></p>
 
 <p>
   <strong><%= t 'helpers.label.reservation.create_date' %>:</strong>
@@ -54,6 +54,3 @@
   <strong><%= t 'helpers.label.reservation.status' %>:</strong>
   <%= t("reservation.status.#{@reservation.status}") %>
 </p>
-
-<%= if @reservation.status == 'new' then link_to t('reservation.actions.edit'), edit_reservation_path(@reservation) end %>
-<%= @reservation.status == 'new' ? link_to(t('reservation.actions.back'), reservations_path) : link_to(t('reservation.actions.back'), history_url) %>

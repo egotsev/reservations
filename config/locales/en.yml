@@ -21,3 +21,8 @@
 
 en:
   hello: "Hello world"
+  reservation:
+    payment_method:
+      bank: "Bank"
+      cash: "Cash"
+    success_text: "The reservation was created. We sent you an email with the reservation ID which you'll have to use in case you are going to pay via bank."

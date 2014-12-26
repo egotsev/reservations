@@ -65,8 +65,9 @@ class ReservationsController < ApplicationController
     @reservation.create_date = Time.now
     respond_to do |format|
       if @reservation.save
-        format.html { redirect_to @reservation, notice: 'Reservation was successfully created.' }
-        format.json { render :show, status: :created, location: @reservation }
+        @notice = I18n.t('reservation.success_text')
+        format.html { render :success, notice: I18n.t('reservation.success_text') }
+        format.json { render :success, status: :ok, location: @reservation }
       else
         format.html { render :new }
         format.json { render json: @reservation.errors, status: :unprocessable_entity }
