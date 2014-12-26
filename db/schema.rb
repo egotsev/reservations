@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141206225208) do
+ActiveRecord::Schema.define(version: 20141226083654) do
 
   create_table "reservations", force: true do |t|
     t.date     "checkin"
@@ -24,9 +24,9 @@ ActiveRecord::Schema.define(version: 20141206225208) do
     t.boolean  "breakfast"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "payment_type"
     t.string   "status"
     t.datetime "create_date"
+    t.integer  "payment_method"
   end
 
 end

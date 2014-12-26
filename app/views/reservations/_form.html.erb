@@ -44,8 +44,8 @@
     <%= f.check_box :breakfast %>
   </div>
   <div class="field">
-    <%= f.label :payment_type %><br>
-    <%= f.select :payment_type, Reservation::PAYMENT_METHODS %>
+    <%= f.label :payment_method %><br>
+    <%= f.select :payment_method, options_for_select(Reservation.payment_methods.collect { |s| [s[0].humanize, s[0]] }, selected: @reservation.payment_method), {} %>
   </div>
   <div class="actions">
     <%= f.submit %>

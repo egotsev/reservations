@@ -77,6 +77,7 @@ class ReservationsController < ApplicationController
   # PATCH/PUT /reservations/1
   # PATCH/PUT /reservations/1.json
   def update
+    logger.info ("RESERVATION TYPE: " + @reservation.payment_method)
     respond_to do |format|
       if @reservation.update(reservation_params)
         format.html { redirect_to @reservation, notice: 'Reservation was successfully updated.' }
@@ -106,6 +107,7 @@ class ReservationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def reservation_params
-      params.require(:reservation).permit(:checkin, :checkout, :client_names, :client_email, :client_phone, :details, :clients_count, :breakfast)
+      params.require(:reservation).permit(:checkin, :checkout, :client_names, :client_email, :client_phone, :details,
+        :clients_count, :breakfast, :payment_method)
     end
 end
