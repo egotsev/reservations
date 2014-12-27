@@ -40,6 +40,12 @@
   <%= @reservation.clients_count %>
 </p>
 
+
+<p>
+  <strong><%= t 'helpers.label.reservation.room_type' %>:</strong>
+  <%= @reservation.room ? @reservation.room.send(:"name_#{I18n.locale}").to_s + " (#{@reservation.room.price} BGN)" : "" %>
+</p>
+
 <p>
   <strong><%= t 'helpers.label.reservation.breakfast' %>:</strong>
   <%= @reservation.breakfast %>
