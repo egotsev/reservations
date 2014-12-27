@@ -40,6 +40,10 @@
     <%= f.number_field :clients_count %>
   </div>
   <div class="field">
+    <%= f.label :room_type %><br>
+    <%= f.select :room, options_for_select(Room.all.collect { |r| []}), selected: @reservation.room %>
+  </div>
+  <div class="field">
     <%= f.label :breakfast %><br>
     <%= f.check_box :breakfast %>
   </div>
