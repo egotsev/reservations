@@ -41,7 +41,7 @@
   </div>
   <div class="field">
     <%= f.label :room_type %><br>
-    <%= f.select :room_id, options_for_select(Room.all.collect { |r| [r.send(:"name_#{I18n.locale}").to_s + " (#{r.price} BGN)", r.id] }, selected: @reservation.room) %>
+    <%= f.select :room_id, options_for_select(Room.all.collect { |r| [r.send(:"name_#{I18n.locale}").to_s + " (#{r.price} BGN)", r.id] }, selected: @reservation.room_id) %>
   </div>
   <div class="field">
     <%= f.label :breakfast %><br>
